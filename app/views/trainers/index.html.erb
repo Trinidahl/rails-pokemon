@@ -1,0 +1,10 @@
+<h1>Let's get training</h1>
+<% @trainers.each do |trainer| %>
+  <%= link_to trainer_path(trainer) do %>
+    <div class="trainer_card">
+      <%= trainer.name %>
+      <%= trainer.age %>
+      <%= cl_image_tag trainer.photo.key %>
+    </div>
+  <% end %>
+<% end %>
