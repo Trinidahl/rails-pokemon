@@ -1,10 +1,15 @@
 <%= link_to "Trainers", trainers_path %>
-<h1><%= @trainer.name %> is going to catch'em all!</h1>
-<%= @trainer.name %>
-<%= @trainer.age %>
-<% @pokemons.each do |pokemon| %>
-  <%= pokemon.name %>
-  <%= pokemon.element_type %>
-  <%= cl_image_tag pokemon.photo.key %>
-<% end %>
-<%= cl_image_tag @trainer.photo.key %>
+<div>
+  <h1><%= @trainer.name %> is going to catch'em all!</h1>
+      <%= @trainer.name %>
+      <%= @trainer.age %>
+</div>
+
+<div>
+  <% @pokemons.each do |pokemon| %>
+    <%= pokemon.name %>
+    <%= pokemon.element_type %>
+    <%= cl_image_tag pokemon.photo.key %>
+  <% end %>
+ <%= cl_image_tag @trainer.photo.key %>
+</div>

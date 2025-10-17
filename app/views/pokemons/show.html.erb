@@ -2,3 +2,10 @@
 <%= @pokemon.name %>
 <%= @pokemon.element_type %>
 <%= cl_image_tag @pokemon.photo.key %>
+
+<%= simple_form_for [@pokemon, @pokeball] do |f| %>
+<%= f.association :trainer  %>
+<%= f.input :location %>
+<%= f.input :caught_on, as: :date, html5: :true  %>
+<%= f.submit "Attrappe le pokemon" %>
+<% end %>
