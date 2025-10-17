@@ -3,4 +3,5 @@ class Pokeball < ApplicationRecord
   belongs_to :pokemon
 
   validates :caught_on, presence: true
+
 end
